@@ -49,7 +49,7 @@ export default function App() {
     const trimmed = name.trim();
     const num = parseFloat(value);
     if (!trimmed) return setError("Name is required.");
-    if (isNaN(num)) return setError("BMI must be a number.");
+    if (isNaN(num)) return setError("BAC must be a number.");
     setError(null);
     setSaving(true);
     const { error: err } = await supabase
@@ -68,7 +68,7 @@ export default function App() {
     setSaving(false);
   };
 
-  // Latest entry per person, ranked by BMI descending
+  // Latest entry per person, ranked by BAC descending
   const latestByPerson = Object.values(
     entries.reduce((acc, e) => {
       const key = e.name.toLowerCase();
@@ -225,7 +225,7 @@ export default function App() {
       {toast && <div style={S.toast}>{toast}</div>}
 
       <div style={S.header}>
-        <h1 style={S.title}>BMI Board</h1>
+        <h1 style={S.title}>BAC Board</h1>
         <div style={S.sub}>
           {tab === "board" && `${latestByPerson.length} on the board`}
           {tab === "add" && "Log a new number"}
@@ -245,7 +245,7 @@ export default function App() {
             </div>
           ) : (
             <>
-              <div style={S.sectionLabel}>Ranked by latest BMI</div>
+              <div style={S.sectionLabel}>Ranked by latest BAC</div>
               {latestByPerson.map((e, i) => (
                 <div key={e.name.toLowerCase()} style={S.card}>
                   <div style={S.rank}>
@@ -273,7 +273,7 @@ export default function App() {
             />
             <input
               style={S.input}
-              placeholder="BMI"
+              placeholder="BAC"
               value={value}
               inputMode="decimal"
               onChange={(e) => setValue(e.target.value)}

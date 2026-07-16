@@ -1,6 +1,4 @@
-# BMI Board
-
-Shared leaderboard. React + Vite frontend, Supabase for storage, deployable to Vercel in a few clicks.
+# BAC Board
 
 ## 1. Supabase (~5 min)
 
