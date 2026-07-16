@@ -1,0 +1,15 @@
+{
+  "name": "BMI Board",
+  "short_name": "BMI Board",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
