@@ -1,6 +1,6 @@
 {
-  "name": "BMI Board",
-  "short_name": "BMI Board",
+  "name": "BAC Board",
+  "short_name": "BAC Board",
   "display": "standalone",
   "start_url": "/",
   "background_color": "#F2F2F7",
